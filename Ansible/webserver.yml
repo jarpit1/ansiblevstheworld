@@ -1,5 +1,14 @@
 - hosts: ansible_machine
+  gather_facts: false
   tasks:
+    - name: Boot up machine
+      command: vagrant up
+      delegate_to: localhost
+
+    - name: wait for SSH connection to machine
+      wait_for:
+        port: 22
+
     - name: Create group
       group:
         name: apache
@@ -14,3 +23,18 @@
       yum:
         name: httpd
         state: present
+
+    - name: Configure httpd.conf
+      copy:
+        src: files/httpd.conf
+        dest: /etc/httpd/conf/httpd.conf
+
+    - name: Configure index.html
+      copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+
+    - name: Restart httpd
+      service:
+        name: httpd
+        state: restarted
