@@ -9,16 +9,6 @@
       wait_for:
         port: 22
 
-    - name: Create group
-      group:
-        name: apache
-        state: present
-
-    - name: Create user
-      user:
-        name: ansible
-        group: apache
-
     - name: Install Apache
       yum:
         name: httpd
