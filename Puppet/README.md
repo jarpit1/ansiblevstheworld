@@ -43,4 +43,4 @@ On your computer:
 (Finally) Setup the web server:
 1. On the agent:
    /opt/puppetlabs/bin/puppet agent --test
-2. Navigate to 172.16.0.4 in your browser to access your new web server
+2. Navigate to 172.16.0.5 in your browser to access your new web server
