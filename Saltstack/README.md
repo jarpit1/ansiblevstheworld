@@ -1,7 +1,10 @@
 For the purposes of this, salt will be run with SSH, instead of the traditional minion master.
 --------------------------------------------------------------------------------
 To build Salt "minion":
-1. vagrant up
+1.
+```shell
+vagrant up
+```
 --------------------------------------------------------------------------------
 Setup:
  1. install salt-ssh (yum install salt-ssh)
@@ -16,9 +19,11 @@ Setup:
  4. Test that it's working properly by running:
     sudo salt-ssh -i 'web1' test.ping
  5. To ensure salt knows where to look for your states, open /etc/salt/master and insert:
+ ```yaml
     files_roots:
       base:
         - /path/to/checked/out/repo/Saltstack/states
+```
 --------------------------------------------------------------------------------
 Running salt:
  1. Run 'vagrant up' to build the machine
