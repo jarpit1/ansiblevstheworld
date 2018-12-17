@@ -1,7 +1,7 @@
 Server setup:
 1. Install Chef server
    wget https://packages.chef.io/files/stable/chef-server/12.18.14/el/7/chef-server-core-12.18.14-1.el7.x86_64.rpm
-   rpm -ivh chef-server-core-*.rpm                                                                                                                                 .* Ignore this
+   rpm -ivh chef-server-core-*.rpm                                                                                                                       
 2. Reconfigure the Chef server
    chef-server-ctl reconfigure
 3. Check the status
@@ -21,7 +21,7 @@ Workstation setup (your computer)(Ubuntu):
 Workstation setup (your computer)(CentOS):
 1. cd ~
 2. wget https://packages.chef.io/files/stable/chef-workstation/0.2.41/el/7/chef-workstation-0.2.41-1.el6.x86_64.rpm
-3. rpm -ivh chefdk-*.rpm                                                                                                                                           .* Ignore this
+3. rpm -ivh chefdk-*.rpm
 4. Verify install
    chef verify
 
