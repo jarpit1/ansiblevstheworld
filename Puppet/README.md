@@ -66,12 +66,11 @@ Setup Puppet manifest on Master:
 yum install rsync
 /opt/puppetlabs/bin/puppet module install puppetlabs-apache
 ```
-On your computer:
-2. Copy manifests/site.pp to /etc/puppetlabs/code/environments/production/manifests/ on the Master
+2. On your computer: copy manifests/site.pp to /etc/puppetlabs/code/environments/production/manifests/ on the Master
 ```shell
 rsync -v -e ssh manifests/site.pp root@172.16.0.5:/etc/puppetlabs/code/environments/production/manifests/
 ```
-3. Copy files/index.html to /etc/puppetlabs/code/environments/production/modules/apache/files on the Master
+3. On your computer: copy files/index.html to /etc/puppetlabs/code/environments/production/modules/apache/files on the Master
 ```shell
 rsync -v -e ssh files/index.html root@172.16.0.5:/etc/puppetlabs/code/environments/production/modules/apache/files
 ```
