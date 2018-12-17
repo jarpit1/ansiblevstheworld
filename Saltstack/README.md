@@ -1,5 +1,8 @@
 Location for Saltstack code.
 
+To build Salt "minion":
+1. vagrant up
+
 For the purposes of this, salt will be run with SSH, instead of the traditional minion master.
 
 Setup:

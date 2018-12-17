@@ -1,3 +1,8 @@
+Build Node and Server:
+1. cd into Node/Server
+2. to build the VM:
+   vagrant up
+
 Server setup:
 1. Install Chef server
    wget https://packages.chef.io/files/stable/chef-server/12.18.14/el/7/chef-server-core-12.18.14-1.el7.x86_64.rpm
