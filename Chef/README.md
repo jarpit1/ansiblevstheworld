@@ -29,15 +29,15 @@ chef-server-ctl org-create co-op "Co-op, Inc" --association_user admin -f /etc/c
 ```
 --------------------------------------------------------------------------------
 Workstation setup (your computer)(Ubuntu):
-1.
+1. Move to your home directory
 ```shell
 cd ~
 ```
-2.
+2. Download the install file
 ```shell
 wget https://packages.chef.io/files/stable/chefdk/3.5.13/debian/9/chefdk_3.5.13-1_amd64.deb
 ```
-3.
+3. Install
 ```shell
 sudo dpkg -i chefdk_3.5.13-1_amd64.deb
 ```
@@ -47,15 +47,15 @@ chef verify
 ```
 
 Workstation setup (your computer)(CentOS):
-1.
+1. Move to your home directory
 ```shell
 cd ~
 ```
-2.
+2. Download the install file
 ```shell
 wget https://packages.chef.io/files/stable/chef-workstation/0.2.41/el/7/chef-workstation-0.2.41-1.el6.x86_64.rpm
 ```
-3.
+3. Install
 ```shell
 rpm -ivh chefdk-*.rpm
 ```
