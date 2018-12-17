@@ -2,7 +2,7 @@ Building Master/Agent
 1. cd into Master/Agent
 2. To build the VM:
    vagrant up
-
+--------------------------------------------------------------------------------
 1. Install puppet on Master
    sudo rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
    sudo yum -y install puppetserver

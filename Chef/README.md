@@ -2,7 +2,7 @@ Build Node and Server:
 1. cd into Node/Server
 2. to build the VM:
    vagrant up
-
+--------------------------------------------------------------------------------
 Server setup:
 1. Install Chef server
    wget https://packages.chef.io/files/stable/chef-server/12.18.14/el/7/chef-server-core-12.18.14-1.el7.x86_64.rpm
@@ -15,7 +15,7 @@ Server setup:
    chef-server-ctl user-create admin admin admin email@email.address password -f /etc/chef/admin.pem
 5. Create organization to hold configurations
    chef-server-ctl org-create co-op "Co-op, Inc" --association_user admin -f /etc/chef/co-op-validator.pem
-
+--------------------------------------------------------------------------------
 Workstation setup (your computer)(Ubuntu):
 1. cd ~
 2. wget https://packages.chef.io/files/stable/chefdk/3.5.13/debian/9/chefdk_3.5.13-1_amd64.deb
@@ -29,7 +29,7 @@ Workstation setup (your computer)(CentOS):
 3. rpm -ivh chefdk-*.rpm
 4. Verify install
    chef verify
-
+--------------------------------------------------------------------------------
 RSA Key stuff:
 1. copy the generated RSA keys from the server to the .chef directory
    scp -pr root@172.16.0.4:/etc/chef/admin.pem .chef/
@@ -43,14 +43,13 @@ RSA Key stuff:
 4. If the previous step fails, fetch the SSL cert from the Chef server
    knife ssl fetch
 5. Run knife client list again and it should work.
-
+--------------------------------------------------------------------------------
 Node setup:
 1. Questionable workaround part 2: change the localhost entry on the node as well (you don't need to remember to change this back, just destroy the VM)
 2. bootstrapping the Chef node:
    knife bootstrap 172.16.0.3 -x root -P vagrant --sudo
 3. Check the current Chef node list. It should be localhost (localhost = node in this case)
    knife node list
-
 --------------------------------------------------------------------------------
 Actually using Chef to configure the node:
 1. Upload the httpd cookbook to the Chef server:

@@ -1,7 +1,7 @@
 Building Ansible host:
 1. In this directory, run:
    vagrant up
-
+--------------------------------------------------------------------------------
 Setting up Ansible:
 1. Install Ansible
 2. To provision the webserver, run:
