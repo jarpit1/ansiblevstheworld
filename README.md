@@ -1,1 +1,1 @@
-The purpose of this repo is to serve as one half of my co-op report that is about the different automation solutions available. This repo contains the code to setup a simple httpd instance with a custom index.html, written in Ansible, Chef, Puppet, and Salt. Each directory contains a readme file with the manual setup that is required by the user. The other half of the co-op report will be a written research report highlighting each solution, with a section on the main ways they differ.
+
