@@ -1,1 +1,1 @@
-
+This project was written to demonstrate the different ways that the most popular automation tools can achieve the same task. Key differences to highlight are the differing lengths and complexity of achieving the same tasks.
